@@ -7,7 +7,7 @@ To Install:
 
 To Include:
 
-   from inside.isInside import isInside
+    from inside.isInside import isInside
 
 Now use the funtion `isInside`.
 
