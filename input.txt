@@ -1,0 +1,96 @@
+########################################################################
+#
+# Copyright (C) 2018 David C. Harrison. All right reserved.
+#
+# You may not use, distribute, publish, or modify this code without 
+# the express written permission of the copyright holder.
+#
+########################################################################
+
+####### Circles / Circles #######
+
+# Circle inside circle
+Circle 0,0 4 Circle 0,0 8 true
+
+# Circle outside circle
+Circle 10,10 2 Circle 0,0 4 false
+
+# Circle intersects circle
+Circle 6,6 4 Circle 0,0 8 false
+
+# Touching circles - inside
+Circle 4,0 4 Circle 0,0 8 true
+
+# Touching circles - outside
+Circle 0,12 4 Circle 0,0 8 false
+
+####### Circles / Triangles #######
+
+# Circle inside triangle
+Circle 0,0 2 Triangle 0,10 6,-6, -6,-6 true
+
+# Circle outside triangle
+Circle 20,-20 2 Triangle 0,5 3,-3, -3,-3 false
+
+# Triangle inside circle
+Triangle 0,5 3,-3, -3,-3 Circle 0,0 10 true
+
+# Triangle outside circle
+Triangle -20,5 -17,-23, -5,-5 Circle 2,-2 6 false
+
+# Circle touching triangle - inside
+Circle 0,2 2 Triangle 0,10 6,0, -6,0 true
+
+# Circle touching triangle - outside
+Circle 0,-2 2 Triangle 0,10 6,0, -6,0 false
+
+# Circle inersecting triangle
+Circle -6,0 4 Triangle 0,10 8,-8, -8,-8 false
+
+####### Circles / Pentagons #######
+
+# Circle inside pentagon
+Circle 1,1 2 Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 true
+
+# Circle outside pentagon
+Circle -4,-14 4 Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 false
+
+# Pentagon inside circle
+Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 Circle 1,-1 16 true
+
+# Pentagon outside circle
+Pentagon 10,10 16,5 14,-4 6,-4 4,5 Circle -2,-2 4 false
+
+# Circle intersects pentagon
+Circle 3,1 3 Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 false
+
+####### Triangles / Pentagons #######
+
+# Triangle inside pentagon
+Triangle 0,2 2,-2 -2,-2 Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 true
+
+# Triangle outside pentagon
+Triangle 10,2 14,-8 6,-8 Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 false
+
+# Triangle intersects pentagon
+Triangle 0,2 4,-8 -4,-8 Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 false
+
+# Pentagon inside triangle
+Pentagon 0,10 6,5 4,-4 -4,-4 -6,5 Triangle 0,18 16,-10 -16,-10 true
+
+####### Circles / Reuleaux Triangles #######
+
+# Circle inside reuleuax triangle
+Circle 0,0 2 ReuleauxTriangle 0,10 6,-6, -6,-6 true
+
+# Circle outside reuleuax triangle
+Circle 10,10 4 ReuleauxTriangle 0,5 3,-3, -3,-3 false
+
+# Reuleaux triangle inside circle
+ReuleauxTriangle 0,5 3,-3, -3,-3 Circle 0,0 10 true
+
+# Reuleaux triangle outside circle
+ReuleauxTriangle -20,5 -17,-23, -5,-5 Circle 2,-2 6 false
+
+# Circle inersecting reuleaux triangle
+Circle -6,0 4 ReuleauxTriangle 0,10 8,-8, -8,-8 false
