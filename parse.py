@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 from math import pi,cos,sin
 import sys
 try:
