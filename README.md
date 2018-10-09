@@ -9,7 +9,7 @@ To Include:
 
     from inside.isInside import isInside
 
-Now use the funtion `isInside`.
+Now use the funtion `isInside( array[(x0,y0),...] insideShape, array[(x0,y0),...] outsideShape )`.
 
 # Description
 
