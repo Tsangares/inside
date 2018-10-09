@@ -1,14 +1,17 @@
 from math import pi,cos,sin
 import sys
-from dotProduct import *
-from matplotlib import pyplot as plt
+try:
+    from isInside import isInside
+except Exception:
+    from inside.isInside import isInside
+
 data=None
 with open(sys.argv[1]) as f:
     data=f.read()
 
 #matplotlib helper
-def plot(shape):
-    plt.plot([x[0] for x in shape],[y[1] for y in shape])
+#def plot(shape):
+#    plt.plot([x[0] for x in shape],[y[1] for y in shape])
 
 data=data.split('\n')
 entries=[]

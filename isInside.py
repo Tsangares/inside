@@ -1,4 +1,8 @@
-from util import *
+try:
+    from util import *
+except Exception:
+    from inside.util import *
+    
 
 # A and B are tuple arrays of shapes.
 # Returns true if shape A is completly contained within shape B
